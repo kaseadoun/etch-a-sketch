@@ -10,12 +10,12 @@ body {
     display: grid;
     margin: 20px;
     grid-template-columns: repeat(16, 1fr);
+    width: 500px;
+    height: 500px;
 }
 
 .grid {
     border: 1px solid lightgrey;
-    width: 30px;
-    height: 30px;
     background-color: white;
 }
 

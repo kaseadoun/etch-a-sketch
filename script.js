@@ -1,6 +1,18 @@
 const etchContainer = document.querySelector("#etchContainer");
 const reset = document.querySelector("button");
 
+let colorTrigger = false;
+let color = "blue";
+
+etchContainer.addEventListener('mousedown', (e) => {
+    colorTrigger = true;
+    e.preventDefault();
+})
+
+etchContainer.addEventListener('mouseup', () => {
+    colorTrigger = false;
+})
+
 let gridSize = 16;
 
 function gridSetup() {
@@ -9,14 +21,26 @@ function gridSetup() {
             const pixel = document.createElement("div");
             etchContainer.appendChild(pixel);
             pixel.className = "grid";
-            pixel.draggable = "false";
             pixel.classList.add("gridBox");
             pixel.style.width = `${500 / gridSize}`;
             pixel.style.height = `${500 / gridSize}`;
-            pixel.addEventListener('mouseover', () => {
-                pixel.style.backgroundColor = "blue";
-            })
         }
+    }
+    draw(color);
+}
+
+function draw(color) {
+let pixelElements = document.querySelectorAll(".gridBox");
+
+    for (let pixelElement of pixelElements) {
+        pixelElement.addEventListener('mousedown', () => {
+            pixelElement.style.backgroundColor = color;
+        })
+        pixelElement.addEventListener('mousemove', () => {
+            if (colorTrigger) {
+                pixelElement.style.backgroundColor = color;
+            }
+        })
     }
 }
 

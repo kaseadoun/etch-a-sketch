@@ -1,0 +1,52 @@
+/* ---------- GENERAL STYLING ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+/* ---------- MAIN ---------- */
+main {
+    display: flex;
+    gap: 50px;
+}
+
+/* Buttons */
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+    gap: 30px;
+}
+
+button, #colorSelect {
+    width: 150px;
+    height: 40px;
+}
+
+#colorSelect {
+    height: 150px;
+}
+
+/* Etch a Sketch Styling */
+#etchContainer {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    width: 500px;
+    height: 500px;
+}
+.grid {
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+.grid:hover {
+    border: 1px solid yellow;
+    filter: drop-shadow(4px yellow)
+}

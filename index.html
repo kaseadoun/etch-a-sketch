@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <button id="resetButton">Reset</button>
-    <div id="etchContainer"></div>
+    <header>
+        <h1>Etch-A-Sketch</h1>
+    </header>
+    <main>
+        <div id="buttonContainer">
+            <input type="color" id="colorSelect" value="#000000">
+            <button id="regularMode">Regular Pen</button>
+            <button id="rainbowMode">Rainbow Pen</button>
+            <button id="eraserMode">Eraser</button>
+            <button id="resetButton">Reset</button>
+        </div>
+        <div id="etchContainer"></div>
+    </main>
+    <footer></footer>
     <script src="script.js"></script>
 </body>
 </html>

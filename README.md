@@ -1,4 +1,4 @@
-**# Etch A Sketch**
+#**Etch A Sketch**
 
 A web based project that allows the user to draw on a grid. Just like an Etch A Sketch.
 
